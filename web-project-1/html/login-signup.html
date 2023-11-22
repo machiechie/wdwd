@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us!</title>
+    <link rel="stylesheet" href="/style/login-signup.css">
+    <link rel="icon" href="/etc/img.icons8.png">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form action="indexidk.php">
+                <div class="input-group">
+                    <div class="input-field" id="namefield">
+                        <input type="text" placeholder="Name">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-field" id="namefield">
+                        <input type="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="input-group" id="namefield">
+                    <div class="input-field">
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <p>Forgot password? <a href="#">Click here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupbtn">Sign up</button>
+                    <button type="button" class="disable" id="loginbtn">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let signupbtn = document.getElementById("signupbtn");
+        let loginbtn = document.getElementById("loginbtn");
+        let namefield = document.getElementById("namefield");
+        let title = document.getElementById("title");
+
+        loginbtn.onclick = function(){
+            namefield.style.maxHeight = "0";
+            title.innerHTML = "Log In";
+            signupbtn.classList.add("disable");
+            loginbtn.classList.remove("disable");
+        }
+    </script>
+</body>
+</html>
